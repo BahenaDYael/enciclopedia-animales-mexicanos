@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enciclopedia de Animales Mexicanos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #98ddca, #61c5d9, #f7d5b6);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header.main-header {
+      background-color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .header-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #045d56;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-button {
+      padding: 10px 15px;
+      background-color: #61c5d9;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-button:hover {
+      background-color: #4caabf;
+    }
+
+    .hero-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 400px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #045d56;
+    }
+
+    .cta-button {
+      padding: 12px 20px;
+      background-color: #f0927d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #d87e6b;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-section, .contact-section, #sobre {
+      background-color: rgba(255,255,255,0.95);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 900px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .animal-form label, .animal-form input, .animal-form textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .animal-form input, .animal-form textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .animal-form button {
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #61c5d9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .gallery-section {
+      padding: 40px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    .main-footer {
+      background-color: #045d56;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-links a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <h1 class="header-title">Enciclopedia de Animales Mexicanos</h1>
+    <nav class="main-nav">
+      <div class="nav-buttons">
+        <button class="nav-button" onclick="location.href='#inicio'"><i class="fas fa-home"></i> Inicio</button>
+        <button class="nav-button" onclick="location.href='#ficha-animal'"><i class="fas fa-paw"></i> Fichas</button>
+        <button class="nav-button" onclick="location.href='#galeria'"><i class="fas fa-images"></i> Galería</button>
+        <button class="nav-button" onclick="location.href='#contacto'"><i class="fas fa-envelope"></i> Contacto</button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <h2 class="hero-title">Bienvenido a la Enciclopedia de Animales Mexicanos</h2>
+      <p>Una exploración de la rica biodiversidad de México, con un enfoque en la conservación y la historia cultural.</p>
+      <button class="cta-button">Explorar Animales</button>
+    </div>
+    <div class="hero-image" style="background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d3835127-df0c-4df1-b506-74a5967465fa.png');"></div>
+  </section>
+
+  <section id="ficha-animal" class="card-section">
+    <h2>Ficha de Animal</h2>
+    <form class="animal-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="nombre-cientifico">Nombre Científico:</label>
+      <input type="text" id="nombre-cientifico" name="nombre-cientifico" required>
+      <label for="origen">Origen:</label>
+      <input type="text" id="origen" name="origen" required>
+      <label for="reproduccion">Reproducción:</label>
+      <input type="text" id="reproduccion" name="reproduccion" required>
+      <label for="estatus">Estatus de Conservación:</label>
+      <input type="text" id="estatus" name="estatus" required>
+      <label for="habitat">Hábitat:</label>
+      <input type="text" id="habitat" name="habitat" required>
+      <label for="historia">Historia Cultural:</label>
+      <textarea id="historia" name="historia" required></textarea>
+      <label for="investigaciones">Investigaciones Contemporáneas:</label>
+      <textarea id="investigaciones" name="investigaciones" required></textarea>
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+
+  <section id="buscador" class="card-section">
+    <h2>Buscador de Animales</h2>
+    <input type="text" id="search-input" placeholder="Buscar por nombre o categoría">
+    <div id="search-results" class="search-results"></div>
+  </section>
+
+  <section id="galeria" class="gallery-section">
+    <h2>Galería Visual</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48688973-fe65-4bea-907f-1ccced087696.png" alt="Jaguar mexicano">
+        <div class="gallery-caption">Jaguar (Panthera onca)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/87da8270-7e0e-4048-be91-8af0224adb87.png" alt="Quetzal resplandeciente">
+        <div class="gallery-caption">Quetzal (Pharomachrus mocinno)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b08b519f-5120-4286-a3ab-ab243f048fcd.png" alt="Ajolote mexicano">
+        <div class="gallery-caption">Ajolote (Ambystoma mexicanum)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-section">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <section id="sobre" class="card-section">
+    <h2>Sobre el Proyecto</h2>
+    <p>Este proyecto es realizado por [Tu Nombre]. Su propósito es educar y concienciar sobre la biodiversidad de México, combinando enfoques etnohistóricos y científicos.</p>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-logo">EM</div>
+    <div class="footer-links">
+      <a href="#">Créditos</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Contacto</a>
+    </div>
+    <p class="footer-text">&copy; <span class="current-year">2023</span> Enciclopedia de Animales Mexicanos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function saveAnimalData(formData) {
+      let animals = JSON.parse(localStorage.getItem('animales')) || [];
+      animals.push(formData);
+      localStorage.setItem('animales', JSON.stringify(animals));
+    }
+
+    function loadAnimalData() {
+      return JSON.parse(localStorage.getItem('animales')) || [];
+    }
+
+    document.querySelector('.animal-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = {
+        nombre: this.nombre.value,
+        nombre_cientifico: this['nombre-cientifico'].value,
+        origen: this.origen.value,
+        reproduccion: this.reproduccion.value,
+        estatus: this.estatus.value,
+        habitat: this.habitat.value,
+        historia_cultural: this.historia.value,
+        investigaciones: this.investigaciones.value
+      };
+      saveAnimalData(formData);
+      alert('Ficha guardada correctamente');
+      this.reset();
+    });
+
+    document.getElementById('search-input').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const results = loadAnimalData().filter(animal =>
+        animal.nombre.toLowerCase().includes(query) ||
+        animal.nombre_cientifico.toLowerCase().includes(query)
+      );
+      const resultsHTML = results.map(animal => `
+        <div class="animal-result">
+          <h3>${animal.nombre}</h3>
+          <p><em>${animal.nombre_cientifico}</em></p>
+          <p>${animal.habitat}</p>
+        </div>
+      `).join('');
+      document.getElementById('search-results').innerHTML = resultsHTML;
+    });
+  </script>
+</body>
+</html>
