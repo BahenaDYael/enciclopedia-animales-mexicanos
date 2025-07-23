@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Jaguar",
+    "nombreCientifico": "Panthera onca",
+    "origen": "México: Selvas y bosques",
+    "reproduccion": "Vivíparo, con cuidado parental prolongado",
+    "estatusConservacion": "Vulnerable",
+    "habitat": "Bosques tropicales y subtropicales",
+    "historiaCultural": "Símbolo de poder en culturas prehispánicas",
+    "investigaciones": "Estudios recientes sobre biodiversidad",
+    "imagen": "assets/images/jaguar.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Águila Real",
+    "nombreCientifico": "Aquila chrysaetos",
+    "origen": "Áreas montañosas y desiertos",
+    "reproduccion": "Ovíparo, con incubación prolongada",
+    "estatusConservacion": "Casi Amenazada",
+    "habitat": "Zonas de alta montaña y vastedades abiertas",
+    "historiaCultural": "Símbolo de poder y nobleza en leyendas mexicanas",
+    "investigaciones": "Proyectos de conservación y estudios de migración",
+    "imagen": "assets/images/aguila-real.jpg"
+  }
+]
